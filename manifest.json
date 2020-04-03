@@ -1,0 +1,28 @@
+{
+    "name": "Hello Chrome API",
+    "version": "1.0.0.0",
+
+    "manifest_version": 2,
+
+    "content_scripts": [
+        {
+            "matches": [ "http://*/*" ],
+            "js": [ "content_scripts/end.js" ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions": [
+      "contextMenus",
+      "tabs"],
+
+    "browser_action": {
+          "default_icon": {                       // иконки для кнопки
+            "19": "/images/br-icon19.png",         // иконка 19x19 пкс
+            "38": "/images/br-icon38.png"          // иконка 38x38 пкс
+          },
+          "default_title": "Наша кнопка",         // всплывающая подсказка появл при наведении мыши на кнопку
+          "default_popup": "popup/popup.html"     // страница появл во всплывающем окне откр при нажатии на кнопку
+    },
+
+    "background": { "scripts": ["content_scripts/background.js"] }
+}

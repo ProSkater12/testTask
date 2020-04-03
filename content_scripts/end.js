@@ -1,0 +1,1 @@
+document.body.innerHTML += '<div style="background-color: #FFFFFF; border-color: black; border-style: solid; color: black; font-family: \'Segoe UI\'; font-size: 24px; position: fixed; left: 0; top: 0; width: 300px; height: 110px; padding: 8px; z-index: 1000000000">Ура!</div>';

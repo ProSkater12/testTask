@@ -1,0 +1,35 @@
+body {
+  margin: 0px;
+}
+
+.main-window {
+  width: 300px;
+  height: 100px;
+  padding: 0px;
+}
+
+.main-window h3 {
+  text-align: center;
+  font-style: normal;
+  font-size: 15px;
+  margin: 10px;
+}
+
+.main-window .head-text {
+}
+
+.input-form {
+  margin: 20px;
+  text-align: center;
+}
+
+.input-form table {
+  text-align: right;
+}
+
+.input-form .sign-in {
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 15px;
+}
