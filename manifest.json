@@ -1,37 +1,27 @@
 {
-    "name": "Hello Chrome API",
+    "name": "TV by Playlists",
     "version": "1.0.0.0",
 
     "manifest_version": 2,
 
-    "content_scripts": [
-        {
-            "matches": [ "http://*/*" ],
-            "js": [ "content_scripts/end.js" ],
-            "run_at": "document_end"
-        }
-    ],
+    "icons": {
+      "19": "images/br-icon19_2.png",
+      "38": "images/br-icon38_2.png"
+    },
     "permissions": [
       "http://*/*",
       "https://*/*",
       "contextMenus",
       "tabs"],
-    "applications": {
-      "gecko": {
-        "id": "borderify@mozilla.org",
-        "strict_min_version": "45.0"
-      }
-    },
-
     "browser_action": {
           "default_icon": {
             "19": "/images/br-icon19.png",
             "38": "/images/br-icon38.png"
           },
           "default_title": "TV by Playlists",
-          "default_popup": "popup/popup.html"
+          "default_popup": "popup/extensionLogin.html"
     },
-    "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+    "content_security_policy": "default-src 'self'; script-src 'self'; object-src 'self'; style-src 'self' 'unsafe-inline'",
 
     "background": { "scripts": ["content_scripts/background.js"] }
 }

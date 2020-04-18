@@ -25,6 +25,22 @@ chrome.extension.onMessage.addListener(function(request, sender, f_callback){
   if(request.mes == "addPlaylist"){
     console.log('2. прошло через фон: ', request);
     active_user.playlists[active_user.playlists.length] = new playlist(request.name);
+    //создаем вкладку в контекстном меню
+    //Чтобы структура была в правильном порядке, мы удаляем вкладку с "Settings", создаем нашу вкладку
+    //и снова добавляем "Settings"
+    //P.s Нельзя изменить id вкладки, поэтому обновлять вкладку не получится
+    chrome.contextMenus.remove('settings');
+    chrome.contextMenus.create(
+      {"title": "add to " + request.name, "id": "playlist_" + (active_user.playlists.length - 1),  "parentId": parent, "onclick": () => { add_URL(active_user.playlists.length - 1); } });
+    chrome.contextMenus.create(
+      {"title": "Settings", "id": 'settings', "parentId": parent, "onclick": settings_click});
+
+    f_callback(active_user); //обратное сообщение
+  };
+  if(request.mes == "editPlaylist"){
+    console.log('2. прошло через фон: ', request);
+    active_user.playlists[request.id].name = request.name;
+    chrome.contextMenus.update("playlist_" + request.id, { "title": 'add to ' + request.name });
     f_callback(active_user); //обратное сообщение
   }
 
@@ -70,10 +86,10 @@ var childs = [];//Плейлисты
 if(active_user){
   for(let i = 0; i < active_user.playlists.length; i++){
       childs[i] = chrome.contextMenus.create(
-      {"title": 'add to ' + active_user.playlists[i].name , "parentId": parent, "onclick": () => { add_URL(i); } });
+      {"title": 'add to ' + active_user.playlists[i].name , "id": ("playlist_" + i), "parentId": parent, "onclick": () => { add_URL(i); } });
   }
 }
 
 var child0 = chrome.contextMenus.create(
-  {"title": "Settings", "parentId": parent, "onclick": settings_click});
+  {"title": "Settings", "id": 'settings', "parentId": parent, "onclick": settings_click});
 //console.log("parent:" + parent + " child1:" + child1 + " child2:" + child2);

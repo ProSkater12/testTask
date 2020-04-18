@@ -1,0 +1,79 @@
+
+  <div class="dialog" role="dialog" aria-labelledby="loginDialogTitle" id="loginDialog" style="display: block; height: 457px;"><button class="focusCycler"></button>
+    <div class="dialogHeader icon leftIcon">
+      <div class="dialogHeaderInner"><span class="dialogHeaderTitle" id="loginDialogTitle"></span></div>
+    </div>
+    <div class="dialogContent dialogContentFixed" style="top: 70px;">
+      <div dialogsection="main" id="loginView" class="lp-grid container gutter-sm">
+        <div id="virtualkeyboard" style="display:none;">
+          <div class="simple-keyboard"></div>
+        </div>
+        <div class="small-margins">
+          <label for="loginDialogEmail" class="label first">Email</label>
+          <label class="error-summary" for="loginDialogEmail" style="display: none;">
+            <div id="validatorSummaryEmail" class="row">
+              <div class="col-1">
+                <div class="validation-img "></div>
+              </div>
+              <div class="col-11"></div>
+            </div>
+          </label>
+        </div>
+
+        <div class="dropdownContainer" style="margin: 0px;">
+          <div class="relative">
+            <div class="dropdownHint" style="line-height: 50px; padding-left: 10px; padding-right: 40px; font-weight: 400; left: 1px; right: 1px;"><span></span></div><input class="dialogInput typeaheadDropdown clickToggles" id="loginDialogEmail"
+              dialogfield="email" type="text" spellcheck="false" style="margin: 0px;">
+          </div>
+          <div class="dropdownMenu selectDropdownList" style="margin-top: -4px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="row small-margins">
+          <div class="col-8 hideOnFederation">
+            <label class="label" for="loginDialogPassword">Master Password</label>
+            <label class="error-summary" for="loginDialogPassword" style="display: none;">
+              <div id="validatorSummaryPassword" class="row">
+                <div class="col-1">
+                  <div class="validation-img "></div>
+                </div>
+                <div class="col-11"></div>
+              </div>
+            </label>
+          </div>
+        </div>
+        <div class="relative hideOnFederation">
+          <input class="dialogInput inputCapsMatter unknown" id="loginDialogPassword" dialogfield="password" type="password" spellcheck="false">
+          <button class="showKeyboard" title="Use Virtual Keyboard"></button>
+          <div class="pull-right tabOrderChange">
+            <a id="forgotPassword" href="javascript:void(0)">Recovery Help</a>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="beforeButtons">
+          <div class="checkboxContainer pull-left">
+            <input id="loginDialogRememberEmail" class="checkbox" dialogfield="rememberEmail" type="checkbox" spellcheck="false">
+            <label class="checkboxLabel" for="loginDialogRememberEmail">Remember Email</label>
+          </div>
+          <div class="checkboxContainer pull-right">
+            <input id="loginDialogRememberPassword" class="checkbox" dialogfield="rememberPassword" type="checkbox" spellcheck="false">
+            <label class="checkboxLabel hideOnFederation" for="loginDialogRememberPassword" id="loginDialogRememberPasswordLabel">Remember Password</label>
+          </div>
+          <div id="loginDialogDisableBrowserDiv" class="checkboxContainer pull-left" style="display: none;">
+            <input id="loginDialogDisableBrowser" class="checkbox" dialogfield="disablePasswordManager" type="checkbox" spellcheck="false">
+            <label class="checkboxLabel" for="loginDialogDisableBrowser" id="loginDialogDisableBrowserLabel">Prevent Browser from Managing Passwords</label>
+          </div>
+        </div>
+        <div class="buttons centerButtons">
+          <button id="logInButton" class="nbtn rbtn">Log In</button>
+        </div>
+        <div class="showOnFederation" style="display:none;">Press Log In to use your company credentials</div>
+        <div class="content-pull-center gutter-bottom-xl">
+          <div>
+            <p class="hr">or</p>
+          </div>
+          <button id="newToLastPass">Create an account</button>
+        </div>
+      </div>
+    </div><button class="focusCycler"></button>
+  </div>

@@ -7,28 +7,31 @@
   <link href="popup.css" rel="stylesheet" />
 </head>
 <body>
-  <div class="main-window">
+  <div class="main-window"  id="main-window">
     <div class="head-text">
 
         <h3><a href="#" id="head-text">TV by Playlists (by tvlists.tv)</a></h3>
     </div>
     <hr>
-
+    <div class="pag_base">
+      <div id="pag_info" class="table_custom"><img src="/images/arrow_left.png" class="table_cell" id="prev_page"/> <div id="this_playlists" class="table_cell text"></div><div id="playlists_value" class="table_cell pl_num text"></div> <img src="/images/arrow_right.png" class="table_cell" id="next_page" /> </div>
+      <!--<div id="pagination" class="pagination"></div> -->
+    </div>
     <!-- Список плейлистов -->
     <div class="playlists" id="playlists">
       <ol id="playlist_ol">
       </ol>
     </div>
     <div class="playlists" id="input_base"></div>
-    <div id="pagination" class="pagination">
 
-    </div>
-
-    <hr>
     </div>
     <div class="bottom_piece">
-          <div class="add_playlist" id="add_playlist"><img src="/images/add_playlist.png" class="add_playlist_img"><div class="add_playlist_text">Add Playlist</div></div>
-          <div class="logout"><button type="button" name="button" class="logout" id='logout'>Logout</button></div>
+
+          <div class="bottom_menu">
+            <hr>
+            <div class="add_playlist" id="add_playlist"><img src="/images/add_playlist.png" class="add_playlist_img"><div class="add_playlist_text">Add Playlist</div></div>
+            <div class="logout"><button type="button" name="button" class="logout" id='logout'>Logout</button></div>
+          </div>
     </div>
 
   <script src="jQuery.js"></script> <!-- Подключаем jQuery -->

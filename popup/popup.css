@@ -1,12 +1,17 @@
-body {
+html, body {
   margin: 0px;
-  height: 75%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column ;
+  height: auto;
 }
 
 .main-window {
   width: 300px;
   height: auto;
   padding: 0px;
+  flex: 1;
+  margin: auto;
 }
 
 .main-window h3 {
@@ -51,6 +56,13 @@ body {
   height: 30px;
 }
 
+.input-form .hrefs {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .tutorial {
   background-color: #FFFFFF; /* Green */
   border: none;
@@ -69,27 +81,59 @@ body {
   font-size: 15px;
   padding-left: 20px;
   padding-top: 5px;
+  overflow: auto;
 }
 
 .playlists ol {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
+  /*margin-bottom: 120px;*/
 }
 
 .playlists li {
-  width: 60%;
-  margin-right: 0px;
+  width: 97%;
+  /*margin-right: 1%;*/
   display: table;
+  height: 25px;
 }
+
+.playlists li input{
+  width: 85%;
+}
+
+.playlists li img{
+  float: right;
+  height: 20px;
+  width: auto;
+}
+
+.table_custom {
+  display: table;
+  margin-left: 20px;
+}
+
+.table_cell {
+  display: table-cell;
+}
+
+.pl_num {
+  padding-left: 3px;
+}
+/*.playlists .info {
+  margin-top: 10px;
+  font-size: 10px;
+}*/
 
 .playlists .table_cell {
   display: table-cell;
 }
 
 .bottom_piece {
-  bottom: 0px;
-  position: relative;
+  width: 100%;
+  height: 20%;
+  flex: 0;
+  margin-top: auto;
 }
 
 .bottom_piece .add_playlist {
@@ -104,6 +148,12 @@ body {
 
 .bottom_piece .add_playlist:hover {
   cursor:	pointer;
+}
+
+.bottom_piece .bottom_menu {
+  margin-top: auto;
+  bottom: 0px;
+  height: 40px;
 }
 
 .add_playlist_img {
@@ -166,4 +216,20 @@ body {
   color: #7DA70D;
   border-color: #7DA70D;
   cursor: default;
+}
+
+.pag_base .table_custom {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pag_base .text{
+  margin-bottom: 15px;
+}
+
+.pag_base img{
+  height: 20px;
+  width: auto;
+  margin: 0px 10px;
+  bottom: 0px;
 }

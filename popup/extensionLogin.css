@@ -1,0 +1,202 @@
+/*
+******* Global *******
+*/
+
+html, body {
+  height: 100%;
+  width: 350px;
+  background: #f2f4f5;
+}
+
+html, body, p, img {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #D22D27;
+}
+
+a.nbtn {
+  display: inline-block;
+  text-decoration: none;
+}
+
+body, input, textarea, button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+* We use button element for accesability purposes but we don't want to use any
+* defualt styline
+*/
+button {
+  background-color: transparent;
+  border: none;
+  color: red;
+  box-sizing: content-box;
+  vertical-align: top;
+  padding: 0;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+/**/
+
+.main_content {
+  display: block;
+  height: 457px;
+  padding: 10px 20px;
+}
+
+.create_account {
+  margin: 20px 20px;
+}
+
+.nbtn {
+  background: white;
+  border: none;
+  box-shadow: 0px 1px 2px RGBA(0, 0, 0, .2);
+  text-align: center;
+  margin: 10px 4px;
+  padding: 10px 8px 9px 8px;
+  width: 93%;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 21px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom-width: 3px;
+  overflow: hidden;
+}
+
+.nbtn:active {
+  padding-top: 13px;
+  padding-bottom: 6px;
+  border-color: white;
+}
+
+.nbtn:hover {
+  text-decoration: none;
+}
+
+.rbtn {
+  background-color: #d32d27;
+  color: #FFF !important;
+  border-color: #af0806;
+}
+
+.rbtn:focus, .rbtn:hover {
+  background-color: #af0806;
+  border-color: #910101;
+  color: #FFF;
+}
+
+.rbtn:active {
+  background-color: #af0806;
+  border-color: #af0806;
+  color: #FFF;
+}
+
+.buttons .nbtn {
+  vertical-align: top;
+  min-width: 0;
+}
+
+/*.centerButtons button{
+  width: 100%;
+}*/
+
+/* Overrides */
+.hr:before,
+.hr:after {
+  background-color: #8C969D;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 35%;
+  margin: 0px 10px;
+}
+
+.hr {
+  overflow: hidden;
+  text-align: center;
+  color: #8C969D;
+}
+
+.content-pull-center {
+  text-align: center;
+}
+
+.gutter-bottom-xl {
+  margin-bottom: 20px;
+}
+
+.inputs input[type="text"]{
+  height: 45px;
+  width: 95%;
+  box-shadow: inset 2px 2px 3px rgba(100, 100, 100, 0.15), 1px 1px 3px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  margin: 2% 2%;
+}
+
+.inputs input[type="text"]:focus{
+  border: 7px solid #81d6e3;
+  border-radius: 4px;
+}
+
+/*Checkboxes*/
+/* прячем input checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* стили для метки */
+label {
+  color: #000;
+  cursor: default;
+  font-weight: normal;
+  line-height: 30px;
+  padding: 10px 0;
+  vertical-align: middle;
+}
+
+/* формируем внешний вид чекбокса в псевдоэлементе before */
+label:before {
+  content: " ";
+  font: 20px/30px FontAwesome;
+  color: #FFF;
+  display: inline-block;
+  margin-right: 15px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: #FFF;
+  border: 1px solid #e3e3e3;
+  border-image: initial;
+  vertical-align: middle;
+  /*background: url(images/vault/Uncheck_Modal.png);*/
+}
+
+/* вариации внешнего вида в зав-ти от статуса checkbox */
+/* checked */
+input:checked + label:before {
+  background: red url(images/vault/Check_Modal.png);
+  content: "\f00c";
+}
+/* disabled */
+input:disabled + label:before {
+  background: #eee;
+  color: #aaa;
+}
