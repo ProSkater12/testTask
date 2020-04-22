@@ -5,7 +5,8 @@
   <title>Login</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-  <link href="extensionLogin.css" rel="stylesheet" />
+  <link href="extensionLogin.css" rel="stylesheet" type="text/css"/>
+  <link href="myButtons.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -14,17 +15,28 @@
 
     </div>
     <div class="inputs">
-      <p>Email</p>
-      <div class="stroke"><input type="text" size="40" /></div>
-      <p>Master Password</p>
-      <div class="stroke"><input type="text" size="40" /></div>
+      <div class="stroke">
+        <p id="alertMailHead">Email</p>
+        <div class="alert" id="alertMail">
+        </div>
+        <input type="text" size="40" id="mail"/>
+      </div>
 
+      <div class="stroke">
+        <p id="alertPassHead">Master Password</p>
+        <div class="alert" id="alertPass">
+        </div>
+        <input type="text" size="40" id="pass"/>
+      </div>
+
+      <div class="checkboxes">
       <div class="stroke">
         <input type="checkbox" id="rem_email"/><label for="rem_email">Remember Email</label>
       </div>
       <div class="stroke">
         <input type="checkbox" id="rem_pass"/><label for="rem_pass">Remember Password</label>
       </div>
+    </div>
     </div>
 
     <div class="buttons centerButtons">

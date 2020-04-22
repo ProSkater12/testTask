@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <link href="createAcc.css" rel="stylesheet" />
+  <link href="myButtons.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="main_content">
+    <div class="dialog-title">
+      <span><strong>Get started with your email</strong></span>
+    </div>
+
+    <div class="email-form">
+
+    <div id="inputDiv" class="lp-field">
+
+      <label id="createAccountEmailLabel" class="validator-label" for="createAccountEmail"></label>
+      <label class="error-summary" for="createAccountEmail" style="display: none;">
+        <div id="validatorSummaryEmail" class="row">
+          <div class="col-1">
+            <div class="validation-img "></div>
+          </div>
+          <div class="col-11"></div>
+        </div>
+      </label>
+      <label class="error-summary" for="termsAndConditions"></label>
+      <input class="dialogInput" id="createAccountEmail" dialogfield="email" type="text" placeholder="Email address">
+
+    </div>
+
+    <div class="termsConditions" id="termsConditions">
+      <span compoundtranslation="">By completing this form, I agree to the <a target="_blank" href="https://lastpass.com/terms.php" id="termsLink">Terms</a> and <a target="_blank" href="https://lastpass.com/privacy.php" id="privacyLink">Privacy
+          Policy</a>.</span>
+      <span compoundtranslation="" class="contactPermissionClause">I want to receive promotional emails, unless <a id="chooseOtherwise" data-default-opt-out-value="0">I opt out</a>.</span>
+      <div class="checkboxContainer contactPermissionContainer" id="PremissionContainer">
+        <input id="contactPermissionCheckbox" class="checkbox" type="checkbox" spellcheck="false">
+        <label for="contactPermissionCheckbox" class="checkboxLabel">I prefer not to receive promotional emails.</label>
+      </div>
+    </div>
+
+    <div>
+      <div class="buttonContent">
+        <div class="buttons rightButtons"><button class="nbtn wbtn" id="sign_in">Sign In</button><button class="nbtn rbtn" id="okButton">Create an account</button></div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <script type='text/javascript' src="jQuery.js"></script>
+  <script type='text/javascript' src="createAcc.js"></script>
+  <script src="https://kit.fontawesome.com/b552969cec.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

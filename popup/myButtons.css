@@ -1,0 +1,50 @@
+.nbtn {
+  background: white;
+  border: none;
+  box-shadow: 0px 1px 2px RGBA(0, 0, 0, .2);
+  text-align: center;
+  margin: 10px 4px;
+  padding: 10px 8px 9px 8px;
+  width: 93%;
+  cursor: pointer;
+  font-size: 21px;
+  line-height: 21px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-bottom-width: 3px;
+  overflow: hidden;
+}
+
+.nbtn:active {
+  padding-top: 13px;
+  padding-bottom: 6px;
+  border-color: white;
+}
+
+.nbtn:hover {
+  text-decoration: none;
+}
+
+.rbtn {
+  background-color: #d32d27;
+  color: #FFF !important;
+  border-color: #af0806;
+}
+
+.rbtn:focus, .rbtn:hover {
+  background-color: #af0806;
+  border-color: #910101;
+  color: #FFF;
+}
+
+.rbtn:active {
+  background-color: #af0806;
+  border-color: #af0806;
+  color: #FFF;
+}
+
+.buttons .nbtn {
+  vertical-align: top;
+  min-width: 0;
+}

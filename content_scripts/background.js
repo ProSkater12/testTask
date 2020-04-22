@@ -42,6 +42,12 @@ chrome.extension.onMessage.addListener(function(request, sender, f_callback){
     active_user.playlists[request.id].name = request.name;
     chrome.contextMenus.update("playlist_" + request.id, { "title": 'add to ' + request.name });
     f_callback(active_user); //обратное сообщение
+  };
+  if(request.mes == "checkMail"){
+    //отправляем запрос на сервер через api
+    //Такого запроса в api нет
+    console.log('2. прошло через фон: ', request);
+    f_callback(true); //обратное сообщение
   }
 
 });

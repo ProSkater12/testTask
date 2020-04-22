@@ -1,0 +1,197 @@
+<html style="height: 400px; width: 700px;"><head>
+<title>Login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="newvaultGlobal.css">
+<link rel="stylesheet" type="text/css" href="dialog.css">
+<link rel="stylesheet" type="text/css" href="buttons.css">
+<link rel="stylesheet" type="text/css" href="loginDialog.css">
+<link rel="stylesheet" type="text/css" href="extensionDialog.css">
+
+</head>
+
+<body class="dialogState">
+
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="topics.js"></script>
+<script type="text/javascript" src="platform.js"></script>
+<script type="text/javascript" src="vaultStrings.js"></script>
+
+<!-- These files are platform specific -->
+<script type="text/javascript" src="platformOverride.js"></script>
+
+<script type="text/javascript" src="features.js"></script>
+<script type="text/javascript" src="controller.js"></script>
+<script type="text/javascript" src="tools.js"></script>
+<script type="text/javascript" src="dialog.js"></script><div id="dialogLoadingOverlay" class="overlay"></div><div id="dialogOverlay" class="overlay"></div>
+<script type="text/javascript" src="dialogFields.js"></script>
+<script type="text/javascript" src="dialogs.js"></script>
+<script type="text/javascript" src="extensionLoginDropdown.js"></script>
+<script type="text/javascript" src="initializeLogin.js"></script>
+
+
+
+<script type="text/javascript" src="loginDialog.js"></script><script type="text/javascript" src="extensionLoginDialog.js"></script><script type="text/javascript" src="capslockstate.js"></script><script type="text/javascript" src="extensionLoginDialogSimple.js"></script><script type="text/javascript" src="selectDropdown.js"></script><script type="text/javascript" src="typeaheadDropdown.js"></script><script type="text/javascript" src="fieldValidator.js"></script><script type="text/javascript" src="backgroundOverlay.js"></script><div class="dialog" role="dialog" aria-labelledby="loginDialogTitle" id="loginDialog" style="display: none; height: 457px;"><button class="focusCycler"></button><div class="dialogHeader icon leftIcon"><div class="dialogHeaderInner"><span class="dialogHeaderTitle" id="loginDialogTitle"></span></div></div><div class="dialogContent dialogContentFixed" style="top: 70px;"><div dialogsection="main" id="loginView" class="lp-grid container gutter-sm">
+  <div id="virtualkeyboard" style="display:none;">
+    <div class="simple-keyboard"></div>
+  </div>
+  <div class="small-margins">
+    <label for="loginDialogEmail" class="label first">Email</label>
+    <label class="error-summary" for="loginDialogEmail" style="display: none;"><div id="validatorSummaryEmail" class="row"><div class="col-1"><div class="validation-img "></div></div><div class="col-11"></div></div></label>
+  </div>
+
+  <div class="dropdownContainer" style="margin: 0px;"><div class="relative"><div class="dropdownHint" style="line-height: 50px; padding-left: 10px; padding-right: 40px; font-weight: 400; left: 1px; right: 1px;"><span></span></div><input class="dialogInput typeaheadDropdown clickToggles" id="loginDialogEmail" dialogfield="email" type="text" spellcheck="false" style="margin: 0px;"></div><div class="dropdownMenu selectDropdownList" style="margin-top: -4px; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px;"><ul></ul></div></div><div class="row small-margins">
+    <div class="col-8 hideOnFederation">
+      <label class="label" for="loginDialogPassword">Master Password</label>
+      <label class="error-summary" for="loginDialogPassword" style="display: none;"><div id="validatorSummaryPassword" class="row"><div class="col-1"><div class="validation-img "></div></div><div class="col-11"></div></div></label>
+    </div>
+  </div>
+  <div class="relative hideOnFederation">
+    <input class="dialogInput inputCapsMatter unknown" id="loginDialogPassword" dialogfield="password" type="password" spellcheck="false">
+    <button class="showKeyboard" title="Use Virtual Keyboard"></button>
+    <div class="pull-right tabOrderChange">
+      <a id="forgotPassword" href="javascript:void(0)">Recovery Help</a>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="beforeButtons">
+    <div class="checkboxContainer pull-left">
+      <input id="loginDialogRememberEmail" class="checkbox" dialogfield="rememberEmail" type="checkbox" spellcheck="false">
+      <label class="checkboxLabel" for="loginDialogRememberEmail">Remember Email</label>
+    </div>
+    <div class="checkboxContainer pull-right">
+      <input id="loginDialogRememberPassword" class="checkbox" dialogfield="rememberPassword" type="checkbox" spellcheck="false">
+      <label class="checkboxLabel hideOnFederation" for="loginDialogRememberPassword" id="loginDialogRememberPasswordLabel">Remember Password</label>
+    </div>
+    <div id="loginDialogDisableBrowserDiv" class="checkboxContainer pull-left" style="display: none;">
+      <input id="loginDialogDisableBrowser" class="checkbox" dialogfield="disablePasswordManager" type="checkbox" spellcheck="false">
+      <label class="checkboxLabel" for="loginDialogDisableBrowser" id="loginDialogDisableBrowserLabel">Prevent Browser from Managing Passwords</label>
+    </div>
+  </div>
+  <div class="buttons centerButtons">
+   <button id="logInButton" class="nbtn rbtn">Log In</button>
+  </div>
+  <div class="showOnFederation" style="display:none;">Press Log In to use your company credentials</div>
+  <div class="content-pull-center gutter-bottom-xl">
+    <div><p class="hr">or</p></div>
+    <button id="newToLastPass">Create an account</button>
+  </div>
+</div>
+</div><button class="focusCycler"></button></div><link type="text/css" rel="stylesheet" href="fonts/opensans/opensans.css"><link type="text/css" rel="stylesheet" href="extensionDialogSimple.css"><link type="text/css" rel="stylesheet" href="extensionLoginDialogBase.css"><link type="text/css" rel="stylesheet" href="lpGrid.css"><link type="text/css" rel="stylesheet" href="backgroundOverlay.css"><link type="text/css" rel="stylesheet" href="extensionLoginDialogTab.css"><div id="blurBackground" class="blur-background light" style="display: none;"><div class="background-overlay-content"><div class="loading" style="display: none;"><div class="loading-inner"></div></div></div></div><script type="text/javascript" src="createAccountDialog.js"></script><script type="text/javascript" src="extensionCreateAccount.js"></script><script type="text/javascript" src="passwordMeter.js"></script><script type="text/javascript" src="fieldToolTip.js"></script><script type="text/javascript" src="emailToolTip.js"></script><script type="text/javascript" src="buildVars.js"></script><script type="text/javascript" src="extensionCreateAccountIcon.js"></script><script type="text/javascript" src="request.js"></script><script type="text/javascript" src="lpArrow.js"></script><script type="text/javascript" src="compositeBackgroundOverlay.js"></script><div class="dialog large-view" role="dialog" aria-labelledby="createAccountDialogTitle" id="createAccountDialog" style="display: block;"><button class="focusCycler"></button><div class="dialogHeader displaynone"><div class="dialogHeaderInner"><span class="dialogHeaderTitle" id="createAccountDialogTitle"></span></div></div><div class="dialogContent"><div class="container extensionCreateAccount" style="display: block;">
+
+    <div id="emailEntry" class="content-pull-left" style="display: none;">
+
+        <div class="dialog-title">
+            <span>Get started with your email</span>
+        </div>
+
+        <div class="email-form">
+
+            <div id="inputDiv" class="lp-field">
+                <label id="createAccountEmailLabel" class="validator-label" for="createAccountEmail" style="">Email address</label>
+                <label class="error-summary" for="createAccountEmail" style="display: none;"><div id="validatorSummaryEmail" class="row"><div class="col-1"><div class="validation-img warning"></div></div><div class="col-11"><p>Email address already in use<a class="pull-right recovery-link" href="https://lastpass.com/forgot.php" target="_blank">Recovery Help</a></p></div></div></label>
+                <label class="error-summary" for="termsAndConditions"></label>
+                <input class="dialogInput" id="createAccountEmail" dialogfield="email" errorgroup="1" type="text" spellcheck="false" placeholder="You'll use this to sign in to LastPass">
+            </div>
+            <div id="termsAndConditionsSimple" class="checkboxContainer" style="display: none;">
+                <input id="termsAndConditions" class="checkbox" dialogfield="termsAndConditions" type="checkbox" spellcheck="false">
+                <label for="termsAndConditions" id="termsAndConditionsLabel" class="checkboxLabel" compoundtranslation="">I agree to the <a target="_blank" href="https://lastpass.com/terms.php">LastPass Terms</a> and <a target="_blank" href="https://lastpass.com/privacy.php">Privacy Policy</a></label>
+            </div>
+            <div class="termsConditions" id="termsConditions">
+                <span compoundtranslation="">By completing this form, I agree to the <a target="_blank" href="https://lastpass.com/terms.php" id="termsLink">Terms</a> and <a target="_blank" href="https://lastpass.com/privacy.php" id="privacyLink">Privacy Policy</a>.</span>
+                <span compoundtranslation="" class="contactPermissionClause">I want to receive promotional emails, unless <a id="chooseOtherwise" data-default-opt-out-value="0">I opt out</a>.</span>
+                <div class="checkboxContainer contactPermissionContainer">
+                    <input id="contactPermissionCheckbox" class="checkbox" type="checkbox" spellcheck="false">
+                    <label for="contactPermissionCheckbox" class="checkboxLabel">I prefer not to receive promotional emails.</label>
+                </div>
+            </div>
+            <div>
+                <div class="buttonContent">
+                <div class="buttons rightButtons"><button class="nbtn wbtn">Sign In</button><button class="nbtn rbtn" automation-id="okButton">Create an account</button></div></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="mpEntry" class="master-password-container" style="display: block;">
+
+        <div class="master-password-form">
+
+            <div class="dialog-title">
+                <span id="masterPasswordDialogTitle" title="and.nemitow2011@mail.ru">and.nemitow2011@mail.ru</span>
+            </div>
+
+            <div id="mpFields">
+
+                <div class="lp-field first-field">
+                    <label id="createAccountDialogPasswordLabel" class="validator-label" for="createAccountDialogPassword"></label>
+                    <label class="error-summary" for="createAccountDialogPassword" style="display: none;"><div id="validatorSummaryPassword" class="row"><div class="col-1"><div class="validation-img "></div></div><div class="col-11"><p>That's an invalid password</p></div></div></label>
+                    <div class="relative" style="margin: 0px;"><input class="dialogInput passwordToggle password" id="createAccountDialogPassword" dialogfield="password" type="password" placeholder="New master password" spellcheck="false" style="margin: 0px; padding-right: 10px;"><button class="showPassword textual displaynone" title="Show Password" style="">SHOW</button><div class="meterContainer"><div class="meter"><div class="poor" style="width: 0%;"></div></div></div></div>
+                </div>
+                <div class="lp-field">
+                    <label id="createAccountDialogConfirmPasswordLabel" class="validator-label" for="createAccountDialogConfirmPassword"></label>
+                    <label class="error-summary" for="createAccountDialogConfirmPassword" style="display: none;"><div id="validatorSummaryReconfirm" class="row"><div class="col-1"><div class="validation-img "></div></div><div class="col-11"></div></div></label>
+                    <div class="relative" style="margin: 0px;"><input class="dialogInput passwordToggle password" id="createAccountDialogConfirmPassword" dialogfield="reconfirm" type="password" placeholder="Confirm master password" spellcheck="false" style="margin: 0px;"><button class="showPassword textual displaynone" title="Show Password">SHOW</button></div>
+                    <div class="twinsContainer">
+                        <p id="twinsies" class="meterLabel text-confirm" style="display: none;">It's a match!</p>
+                    </div>
+                </div>
+                <div class="lp-field">
+                    <label id="createAccountReminderLabel" class="validator-label" for="createAccountReminder"></label>
+                    <label class="error-summary" for="createAccountReminder" style="display: none;"><div id="validatorSummaryReminder" class="row"><div class="col-1"><div class="validation-img "></div></div><div class="col-11"></div></div></label>
+                    <input class="dialogInput" id="createAccountReminder" dialogfield="reminder" type="text" placeholder="Password hint (optional)" spellcheck="false">
+                </div>
+
+                <div>
+                    <div class="buttonContent">
+                    <div class="buttons rightButtons"><button class="nbtn wbtn">Back</button><button class="nbtn rbtn" automation-id="okButton">Next</button></div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="master-password-help">
+            <div id="helpContainer">
+                <div id="mpHelp" fieldtooltipinputid="createAccountDialogPassword" class="help-box content-box">
+                    <h2>Create a new master password</h2>
+                    <div>
+                        <div>
+                            <p class="tip-title">Our minimum requirements:</p>
+                        </div>
+                        <div id="mpValidators" class="tip-validators"><div><div id="passwordLength" class="row"><div class="col-1"><div class="validation-img warning"></div></div><div class="col-11"><p>At least 12 characters long</p></div></div><div id="passwordNumber" class="row"><div class="col-1"><div class="validation-img warning"></div></div><div class="col-11"><p>Have at least 1 number</p></div></div><div id="passwordUpper" class="row"><div class="col-1"><div class="validation-img warning"></div></div><div class="col-11"><p>Have at least 1 uppercase letter</p></div></div><div id="passwordLower" class="row"><div class="col-1"><div class="validation-img warning"></div></div><div class="col-11"><p>Have at least 1 lowercase letter</p></div></div><div id="passwordSameAsEmail" class="row"><div class="col-1"><div class="validation-img warning"></div></div><div class="col-11"><p>Not your email</p></div></div></div></div>
+                    </div>
+                    <div id="easyPassword">
+                        <p class="tip-title">Our advice:</p>
+                        <p compoundtranslation="" class="tip">Tell a story unique to you. <br>
+                        <em>Fidoate!my2woolsox</em></p>
+                    </div>
+                    <div class="tip-more-container">
+                        <a class="tip-more-btn">What makes a password strong?</a>
+                        <div class="tip-more">
+                            <p class="tip">A secure password is long and hard to guess; special characters and numbers are less important.</p>
+                            <p class="tip">A short phrase unique to your life is more secure and easier to remember than any version of 'P@s$W0r|D'!</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="mpConfirmHelp" fieldtooltipinputid="createAccountDialogConfirmPassword" class="help-box content-box">
+                    <h2>Make sure you remember it!</h2>
+                    <div>
+                        <p class="tip">LastPass is so secure, even we can't get into your account. We never store your master password, so remember it!</p>
+                    </div>
+                </div>
+                <div id="reminderHelp" fieldtooltipinputid="createAccountReminder" class="help-box content-box">
+                    <h2>Leave yourself a lifeline</h2>
+                    <div>
+                        <p class="tip">Since there's no way to reset your master password, be sure to create a reminder that will surely help you remember your master password!</p>
+                    </div>
+                    <div>
+                        <p class="tip">Make sure your reminder is clear to you, but it can't include your master password itself!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+<div id="compositeBlurBackground" class="composite-overlay-root" style="display: none;"></div><div class="composite-background-overlay-container" style="display: none;"><div id="blurBackground" class="blur-background light untransparent top-left" style="display: none;"><div class="background-overlay-content"><div class="loading" style="display: none;"><div class="loading-inner"></div></div><div class="loading-text">Getting things set up</div></div></div></div></div>
+<div class="createAccountLoading" style="display: none;">
+</div></div><button class="focusCycler"></button></div><link type="text/css" rel="stylesheet" href="passwordMeter.css"><link type="text/css" rel="stylesheet" href="extensionCreateAccountBase.css"><link type="text/css" rel="stylesheet" href="extensionCreateAccountIcon.css"><link type="text/css" rel="stylesheet" href="compositeBackgroundOverlay.css"></body></html>

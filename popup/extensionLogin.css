@@ -6,6 +6,7 @@ html, body {
   height: 100%;
   width: 350px;
   background: #f2f4f5;
+
 }
 
 html, body, p, img {
@@ -24,7 +25,7 @@ a.nbtn {
 
 body, input, textarea, button {
   font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 ul {
@@ -58,57 +59,6 @@ button {
 
 .create_account {
   margin: 20px 20px;
-}
-
-.nbtn {
-  background: white;
-  border: none;
-  box-shadow: 0px 1px 2px RGBA(0, 0, 0, .2);
-  text-align: center;
-  margin: 10px 4px;
-  padding: 10px 8px 9px 8px;
-  width: 93%;
-  cursor: pointer;
-  font-size: 21px;
-  line-height: 21px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  border-bottom-width: 3px;
-  overflow: hidden;
-}
-
-.nbtn:active {
-  padding-top: 13px;
-  padding-bottom: 6px;
-  border-color: white;
-}
-
-.nbtn:hover {
-  text-decoration: none;
-}
-
-.rbtn {
-  background-color: #d32d27;
-  color: #FFF !important;
-  border-color: #af0806;
-}
-
-.rbtn:focus, .rbtn:hover {
-  background-color: #af0806;
-  border-color: #910101;
-  color: #FFF;
-}
-
-.rbtn:active {
-  background-color: #af0806;
-  border-color: #af0806;
-  color: #FFF;
-}
-
-.buttons .nbtn {
-  vertical-align: top;
-  min-width: 0;
 }
 
 /*.centerButtons button{
@@ -152,8 +102,10 @@ button {
 }
 
 .inputs input[type="text"]:focus{
-  border: 7px solid #81d6e3;
-  border-radius: 4px;
+  height: 37px;
+  width: 285px;
+  border: 5px solid #81d6e3;
+  border-radius: 5px;
 }
 
 /*Checkboxes*/
@@ -175,28 +127,53 @@ label {
 /* формируем внешний вид чекбокса в псевдоэлементе before */
 label:before {
   content: " ";
-  font: 20px/30px FontAwesome;
+  /*font: 20px/30px FontAwesome;*/
   color: #FFF;
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 5px;
   position: relative;
-  width: 30px;
-  height: 30px;
-  background: #FFF;
+  width: 15px;
+  height: 15px;
+  /*background: #FFF;*/
   border: 1px solid #e3e3e3;
-  border-image: initial;
+  /*border-image: initial;*/
   vertical-align: middle;
-  /*background: url(images/vault/Uncheck_Modal.png);*/
+  background-image: url("../images/vault/Uncheck_Modal.png");
 }
 
 /* вариации внешнего вида в зав-ти от статуса checkbox */
 /* checked */
 input:checked + label:before {
-  background: red url(images/vault/Check_Modal.png);
-  content: "\f00c";
+  background-image: url("../images/vault/Check_Modal.png");
 }
 /* disabled */
 input:disabled + label:before {
   background: #eee;
   color: #aaa;
+}
+
+.alert {
+  color: #e67e22;
+  display: none;
+  font-size: 13px;
+}
+
+.alert .textBox{
+  margin-top: -0.625em;
+  display: table-cell;
+}
+
+.alert img {
+  width: 13px;
+  height: auto;
+  margin-right: 7px;
+  display: table-cell;
+}
+
+.checkboxes {
+  display: table;
+}
+
+.checkboxes .stroke{
+  display: table-cell;
 }
